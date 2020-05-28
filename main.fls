@@ -90,8 +90,6 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
 INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
-INPUT /usr/share/texlive/texmf-dist/tex/latex/parskip/parskip.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/parskip/parskip.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 INPUT main.aux

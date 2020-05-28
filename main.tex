@@ -10,7 +10,7 @@
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 
-\usepackage[parfill]{parskip}
+%\usepackage[parfill]{parskip}
 
 
 \setlength{\parindent}{0pt}
@@ -34,7 +34,7 @@
 
 \maketitle
 
-\begin{abstract}
+\forceindent \begin{abstract}
 %This document is a model and instructions for \LaTeX.
 %This and the IEEEtran.cls file define the components of your paper [title, text, heads, etc.]. *CRITICAL: Do Not Use Symbols, Special Characters, Footnotes, 
 %or Math in Paper Title or Abstract.
@@ -48,7 +48,7 @@ embedded systems, mobile operating systems, operating systems, difference, compa
 \section{Introduction}
 \forceindent Human activity is increasingly augmented with computing systems, and the hardware they run on usually have some kind of operating system on it, be it the phones in our pockets that use a Mobile Operating System, or the Subway ticket door that uses an Embedded system operating system.
 
-%\bigskip
+\smallskip
 \forceindent In this document, we seek to provide a glimpse into the world of these two types of operating systems, by talking about each of their relevance, usage scenarios, pros and cons. We will also provide a brief comparison between Microkernel and monolithic kernel.
 
 \section{Background}
@@ -62,7 +62,7 @@ embedded systems, mobile operating systems, operating systems, difference, compa
 \forceindent The main reason for embedded OS to exist is to act as a partitioning tool as well as manage hardware and software resources for the embedded system to work as intended. It also simplifies software development in the upper layer by providing an abstraction layer. The need for it lies in how embedded operating systems can perform a dedicated function for a specific device to run while also allow it to be less demanding in terms of resource consumption\cite{ITEOSPV}.
 
 \\
-%\bigskip
+\bigskip
 \paragraph{What is the application?}\mbox{} \\
 \forceindent Applications of embedded system OS include Embedded Linux, iOS, Windows Mobile OS, Blackberry OS, and Symbian. A Linux operating system that is utilized within embedded devices and appliances is called Embedded Linux. ATM machines utilising Windows XP is also an application of embedded operating systems.
 
@@ -77,6 +77,7 @@ embedded systems, mobile operating systems, operating systems, difference, compa
 \forceindent Some notable examples of mobile OS are Apple’s iOS and Google’s Android OS. The differences between iOS and Android is that iOS is designed to only run on Apple devices within its XNU kernel while Android is an open source software which implies that it can be used by other mobile device manufacturers who are then able to customize the Android source code to fit their own device’s needs. Apple has also released other mobile OS meant for their Apple watch and iPad which is watchOS and iPadOS respectively\cite{CSMOS}.
 
 
+\smallskip
 \forceindent Covering all types of operating systems in embedded systems and mobile systems can be vague and challenging. With that said, Operating  systems  that are ubiquitous will be chosen to elaborate more in depth about their structure and features.
 
 
@@ -120,7 +121,7 @@ embedded systems, mobile operating systems, operating systems, difference, compa
 %\paragraph{}
 \forceindent Microkernel only provides fundamental OS services including interprocess communication(IPC), memory management and CPU scheduling\cite{Galvinbook}. Other services are implemented as user-level programs located in separate address space from Microkernel\cite{Galvinbook}. To achieve extensible service implementation and communication between other services and microkernels. IPC is an important function as it uses message passing\cite{Burger} allowing other services to exchange messages between each other indirectly.
 
-%\bigskip
+\bigskip
 \paragraph{Linux kernel in Android architecture} \mbox{} \\
 \forceindent Android OS has a 86.1\% market share in the mobile OS market \cite{SMS}. It is based on the Linux kernel with a monolithic structure.
 
@@ -132,28 +133,35 @@ embedded systems, mobile operating systems, operating systems, difference, compa
 \end{figure}
 
 %[1] again ffs, assume it is [A] so it Galvinbook
+\smallskip
 \forceindent Fundamental OS services and other non-essential services are combined together into one single address space\cite{Galvinbook}. System calls are used in android architect to allow application programs to interact with the kernel\cite{TDDBM}.
 
+\smallskip
 \forceindent Figure 2 indicates that android’s architecture consists of a layered stack of software providing an abundance set of frameworks and libraries to support crucial hardware features including graphics, audio\cite{Galvinbook}. For that reason, it gives the android operating system to be compatible with any types of android enabled devices.
 
+\smallskip
 \forceindent With the accumulated resources gathered, it can be concluded that embedded OS and mobile OS use different approaches on OS structure for different benefits, and using the wrong OS type could be devastating. Thus, the pros and cons of embedded operating system and mobile operating system shall be explained to aid the choosing of OS architectures.
 
-%\bigskip
+\bigskip
 \subsection{Pros of Embedded OS}
 \paragraph{Loads faster and consumes less power} \mbox{} \\
 \forceindent Embedded system OS can be attached to a PC and will always load faster from the flash compared to a standard computer OS because of the limited features built in it. This is beneficial when users only need to perform a single task such as browsing the internet.\cite{TDDBM}
 
+\bigskip
 \paragraph{Distinct functions} \mbox{} \\
 \forceindent Embedded system OS differs greatly from standard OS in terms of their abilities to perform different functions. Embedded OS will be limited to one single task and will perform the task regardless of user intervention. Examples of devices using an embedded OS would range from a simple toaster to specific embedded systems such as the QNX4 RIOS\cite{NOSvsEOS}.
 
+\bigskip
 \subsection{Cons of Embedded OS}
 \paragraph{Hardly Scalable} \mbox{} \\
 \forceindent Embedded system OS are usually not upgradable since it's system stays fixed after the initial configuration. Some embedded systems OS like the ones in  ATM machines are also designed to not receive upgrades to prevent tampering. Embedded system OS only allows upgrades if the chip is flashable. An example of an upgradable embedded system OS would be the one in a wifi router, it can be updated by flashing the card in the router upon downloading the new firmware\cite{lifewire}.
 
+\bigskip
 \subsection{Pros of Mobile OS}
 \paragraph{Open source platforms are constantly updated and well-supported} \mbox{} \\
 \forceindent Mobile  system OS such as Android open source software is one of the most widely used Mobile OS in the world.It is utilised by top mobile conglomerates like Huawei and Samsung. In recent years, we could see that there are more variations of the open source platform to support and cater to specific markets like the HongMengOS (Harmony OS) that is launched in 2019 for new Huawei devices exclusively\cite{HuaweiHongmeng}. Such new launches suggest that Mobile system OS are still in high demand and will be the focal point of operating systems in many years to come.
 
+\bigskip
 \paragraph{Convenience and flexibility} \mbox{} \\
 \forceindent Mobile  system OS is a newer concept and is built to focus on being convenient to its users. It is improved on existing OS and opts to strive in responsive design, consistent and stable network access and possible improvements to be used in the diverse wireless environment\cite{technopedia}.
 
@@ -163,6 +171,7 @@ Mobile system OS like Android are open-source and are widely used as a base for 
 \paragraph{Instability} \mbox{} \\
 \forceindent Mobile system OS struggles with the constraints of handling constant cellular interruptions and communications, power issues and the load on handling multiple applications launched by the user\cite{AAWP}. On average, a mobile phone easily uses anywhere from 50 to 500 processes on a comparatively smaller capacity compared to an embedded system OS which commonly runs a single shell. This leads to frequent crashes and bugs that leads to complications and instabilities.
 
+\bigskip
 \paragraph{Battery / Power} \mbox{} \\
 \forceindent Mobile OS runs on a limited battery capacity unlike embedded OS which runs with a constant power supply. Although modern mobile devices now are equipped with better batteries, they are still lacking and unable to keep up with improvements in graphics and animations like in triple A games for mobiles. Many background processes are also capable of draining the battery, accelerating its wear.
 
