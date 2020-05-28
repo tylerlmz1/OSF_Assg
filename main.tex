@@ -30,6 +30,7 @@
 %This document is a model and instructions for \LaTeX.
 %This and the IEEEtran.cls file define the components of your paper [title, text, heads, etc.]. *CRITICAL: Do Not Use Symbols, Special Characters, Footnotes, 
 %or Math in Paper Title or Abstract.
+Operating systems play a significant role in powering devices worldwide, this document seeks to provide a comparison between Embedded system operating systems and Mobile Operating systems.
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -37,66 +38,124 @@ embedded systems, mobile operating systems, operating systems, difference, compa
 \end{IEEEkeywords}
 
 \section{Introduction}
-In the background section, we will provide a brief introduction to Embedded systems OS and Mobile OS respectively. In the in-depth review and discussion section, we will explore the usage of QNX in embedded systems and why it is a good fit.
+Human activity is increasingly augmented with computing systems, and the hardware they run on usually have some kind of operating system on it, be it the phones in our pockets that use a Mobile Operating System, or the Subway ticket door that uses an Embedded system operating system. In this document, we seek to provide a glimpse into the world of these two types of operating systems, by talking about each of their relevance, usage scenarios, pros and cons. We will also provide a brief comparison between Microkernel and monolithic kernel.
 
 \section{Background}
 \subsection{Embedded system OS}
 
 \paragraph{What is it about?}\mbox{} \\
-Embedded system operating system is a type of operating system that is created to carry out distinct processes for particular devices in order for them to operate optimally. In other words, it is just like having software embedded in a one purpose computer hardware system.They belong to a category of specialized operating systems meaning that they function to perform tasks that are highly specific. Hence, they are more resource efficient than other operating systems but at the same time they are limited in terms of functions. Embedded system operating systems may exist as a standalone independent system or belong as a part of something bigger.There are five types of embedded operating system; Multi-Tasking Operating System, Rate Monotonic Operating System, Preemptive Operating System, Single System Control Loop and Real Time Operating System. Generally, Its main focus is to let a certain device function as intended by running its codes.\\
+Embedded system operating system is a type of operating system that carries out distinct processes for particular devices in order for them to operate optimally. It is just like a toned down version of a standard computer OS with limited functionality\cite{TNEOS}. Embedded system operating systems may exist as a standalone independent system or belong as a part of something bigger\cite{ITEOSMC}. \\
 
 \\
 \paragraph{Why the need for it?}\mbox{} \\
-Embedded systems operating systems are everywhere nowadays. It has basically been incorporated in the daily routines of humans and is gradually turning life to be more convenient. There is a need for it as it is able to fill in a niche in our lives. The need for it lies in how embedded operating systems can perform a dedicated function for a specific device to run while also allow it to be less demanding in terms of resource consumption. Devices such as cameras, medical equipment, household appliances all require an embedded operating system to work. Some of it are also designed to be able to withstand harsh temperatures and environments in which other operating systems will fail. Therefore, an embedded operating system is needed to let a single-functioned device to work as intended.
+The main reason for embedded OS to exist is to act as a partitioning tool as well as manage hardware and software resources for the embedded system to work as intended. It also simplifies software development in the upper layer by providing an abstraction layer. The need for it lies in how embedded operating systems can perform a dedicated function for a specific device to run while also allow it to be less demanding in terms of resource consumption\cite{ITEOSPV}.
 
 \\
 \paragraph{What is the application?}\mbox{} \\
-Embedded operating systems are applied in many ways. Applications of it include Embedded Linux, iOS, Windows Mobile Operating System, Blackberry Operating System, and Symbian.A Linux operating system that is utilized within embedded devices and appliances are called Embedded Linux.
+Applications of embedded system OS include Embedded Linux, iOS, Windows Mobile OS, Blackberry OS, and Symbian. A Linux operating system that is utilized within embedded devices and appliances is called Embedded Linux. ATM machines utilising Windows XP is also an application of embedded operating systems.
 
 \subsection{Mobile OS}\\
 \paragraph{What is it about?}\mbox{} \\
-A mobile OS, short for mobile operating system, is another type of operating system that is created for the sole purpose of powering mobile devices. These mobile devices include PDAs, tablets, smartphones etc. Similar to how a Windows operating system works in a desktop, a mobile operating system allows different kinds of applications to run on a mobile device by serving as a software platform beneath the apps. All the features and functions that are available on mobile devices are all set by the corresponding mobile operating system.On top of that, mobile operating systems will also be in control of the third-party programs that are used on the mobile device.
+A mobile OS is another type of operating system that is created for the sole purpose of powering mobile devices. These mobile devices include PDAs, tablets, smartphones etc. Similar to how the Windows operating system works in a desktop, a mobile operating system allows different kinds of applications to run on a mobile device by serving as a software platform beneath the apps.
 \\
 \paragraph{Why the need for it?}\mbox{} \\
-Technically, smartphones do not require an operating system and the device can just run without problem but it would be a mess since there will be no operating system present to manage the memory, storage and applications. Therefore, a mobile operating system is essential for mobile devices to run ideally. A mobile operating system would enable multitasking, which means that multiple applications can run at one time. It will also allow the users to adjust the brightness and volume of all the applications through a single button. Other than that, applications would then be compatible and portable across multiple devices of different brands.
+A mobile operating system is essential for mobile devices to run ideally. A mobile operating system would enable multitasking, which means that multiple applications can run at one time. It will also allow the users to adjust the brightness and volume of all the applications through a single button. Other than that, applications would then be compatible and portable across multiple devices of different brands.
 \\
 \paragraph{What is the application?}\mbox{} \\
-Some notable examples of mobile operating systems are iOS which powers apple devices and Google’s Android which powers android devices. The differences between iOS and Android is that iOS is designed to only run on Apple devices within its XNU kernel while Android is an open source software which implies that it can be used by other mobile device manufacturers who are then able to customize the Android source code to fit their own device’s needs. Apple has also released other mobile OS meant for their Apple watch and iPad which is watchOS and iPadOS respectively. Other than the two well-known mobile OS, there are also many different mobile OS out there but with lower adoption rates such as the KaiOS and the Sailfish OS. KaiOS is mostly used for dumb phones and has features like Google Assistant while the Sailfish OS is mostly used for Sony mobile devices albeit both run on the Linux kernel. On top of that, there is an up and coming OS which is Huawei’s HarmonyOS that was released in 2019. It aims to power devices in a more efficient way in terms of better memory and storage management by making the codes more streamlined. This newly created OS wants to create one ecosystem for every device to share by using the ‘single kernel across devices approach’.It is also set to be Android’s newest rival as it is also released as an open source platform.
+Some notable examples of mobile OS are Apple’s iOS and Google’s Android OS. The differences between iOS and Android is that iOS is designed to only run on Apple devices within its XNU kernel while Android is an open source software which implies that it can be used by other mobile device manufacturers who are then able to customize the Android source code to fit their own device’s needs. Apple has also released other mobile OS meant for their Apple watch and iPad which is watchOS and iPadOS respectively\cite{CSMOS}.
+Covering all types of operating systems in embedded systems and mobile systems can be vague and challenging. With that said, Operating  systems  that are ubiquitous will be chosen to elaborate more in depth about their structure and features.
 
 
 
 \section{In-depth review and discussion}
-There are many types of embedded systems that use different operating systems based on suitability. The most often used embedded system is real-time embedded system (RTOS) according to SILBERSCHATZ.et al [1, p.83] due to the wide range of usage from household appliances to automotive and aerospace systems that requires monitoring real-time events.
 
-QNX is one of the operating systems used in real-time embedded systems. QNX heavily relies on Microkernel architecture to support its own operating system.
 
-\begin{center}
-\includegraphics[scale=0.4]{./images/QNX_OS.png}
-\end{center}
-\subsection{Reason for using Microkernel in QNX}
-%\subsection{Efficiency}
-\paragraph{Efficiency}\mbox{} \\
-Microkernels require less resources to operate as they only contain essential functions(which are interprocess communication, memory management and CPU scheduling) to operate, it allows handling process and memory management to be more efficient. [1] With the benefits of minimal requirement of resources reduce the cost of building embedded systems.
-\\
+%\begin{center}
+%\includegraphics[scale=0.4]{./images/QNX_OS.png}
+%\end{center}
+
+%\subsection{Reason for using Microkernel in QNX}
+%%\subsection{Efficiency}
+%\paragraph{Efficiency}\mbox{} \\
+%Microkernels require less resources to operate as they only contain essential functions(which are interprocess communication, memory management and CPU scheduling) to operate, it allows handling process and memory management to be more efficient. [1] With the benefits of minimal requirement of resources reduce the cost of building embedded systems.
+%\\
 %\subsection{Extentability}
-\paragraph{Extentability}\mbox{} \\
-%\paragraph{}
-Any services can be implemented easily in the user mode without affecting the kernel mode[1]. As a result, any services that need to be updated or modified can be done easily.
-\\
-%\subsection{Security and Reliability}
-\paragraph{Security and reliability}\mbox{} \\
-%\paragraph{}
-The kernel space will not be affected if any of the services is damaged, because services are only implemented in user mode instead of kernel mode according to SILBERSCHATZ.et al[1]. Damaged kernels can cause serious issues during real-time scenarios. For instance, failure of an anti-lock braking system causing severe accidents that will lead to high chances of deaths. Therefore, security and reliability is crucial to the real-time operating systems.
+%\paragraph{Extentability}\mbox{} \\
+%%\paragraph{}
+%Any services can be implemented easily in the user mode without affecting the kernel mode[1]. As a result, any services that need to be updated or modified can be done easily.
+%\\
+%%\subsection{Security and Reliability}
+%\paragraph{Security and reliability}\mbox{} \\
+%%\paragraph{}
+%The kernel space will not be affected if any of the services is damaged, because services are only implemented in user mode instead of kernel mode according to SILBERSCHATZ.et al[1]. Damaged kernels can cause serious issues during real-time scenarios. For instance, failure of an anti-lock braking system causing severe accidents that will lead to high chances of deaths. Therefore, security and reliability is crucial to the real-time operating systems.
 
-\subsection{QNX operating system}
+\paragraph{Microkernel in QNX Architecture}
+QNX is one of the operating systems used in real-time embedded systems. QNX heavily relies on Microkernel architecture to support its own operating system\cite{Burger}\cite{Galvinbook}.
+%TODO: yet add page number for Galvinbook
+
+%\subsection{QNX operating system}
+
+
+\begin{figure}[h]
+\caption{QNX Microkernel model}
 \begin{center}
 \includegraphics[scale=0.5]{./images/QNX_microkernel_mode.png}
 \end{center}
-According to https://people.apache.org/~xli/papers/itj2012-mobile-os-trends.pdf, Mobile OS is originally derived from the computer OS which was then evolved into an embedded OS and then to the present smartphone-oriented OS. Throughout the evolutions, the architecture of mobile OS has become simpler compared to the previous versions. In terms of hardware, the factor size of microprocessors and peripherals has been reduced to accommodate the modern design of smartphones.\cite{NOSvsEOS}
+\end{figure}
 
 %\paragraph{}
+Microkernel only provides fundamental OS services including interprocess communication(IPC), memory management and CPU scheduling\cite{Galvinbook}. Other services are implemented as user-level programs located in separate address space from Microkernel\cite{Galvinbook}. To achieve extensible service implementation and communication between other services and microkernels. IPC is an important function as it uses message passing\cite{Burger} allowing other services to exchange messages between each other indirectly.
+
+\paragraph{Linux kernel in Android architecture}
+Android OS has a 86.1\% market share in the mobile OS market \cite{SMS}. It is based on the Linux kernel with a monolithic structure.
+
+\begin{figure}[h]
+  \caption{Android architecture}
+\begin{center}
+\includegraphics[scale=0.5]{./images/Android_architecture.png}
+\end{center}
+\end{figure}
+
+%According to https://people.apache.org/~xli/papers/itj2012-mobile-os-trends.pdf, Mobile OS is originally derived from the computer OS which was then evolved into an embedded OS and then to the present smartphone-oriented OS. Throughout the evolutions, the architecture of mobile OS has become simpler compared to the previous versions. In terms of hardware, the factor size of microprocessors and peripherals has been reduced to accommodate the modern design of smartphones.
+%\cite{NOSvsEOS}
+
+
+%[1] again ffs, assume it is [A] so it Galvinbook
+Fundamental OS services and other non-essential services are combined together into one single address space\cite{Galvinbook}. System calls are used in android architect to allow application programs to interact with the kernel\cite{TDDBM}.
+
+Figure 2 indicates that android’s architecture consists of a layered stack of software providing an abundance set of frameworks and libraries to support crucial hardware features including graphics, audio\cite{Galvinbook}. For that reason, it gives the android operating system to be compatible with any types of android enabled devices.
+
+With the accumulated resources gathered, it can be concluded that embedded OS and mobile OS use different approaches on OS structure for different benefits, and using the wrong OS type could be devastating. Thus, the pros and cons of embedded operating system and mobile operating system shall be explained to aid the choosing of OS architectures.
+
+\subsection{Pros of Embedded OS}
+\paragraph{Loads faster and consumes less power} %\mbox{} \\
+Embedded system OS can be attached to a PC and will always load faster from the flash compared to a standard computer OS because of the limited features built in it. This is beneficial when users only need to perform a single task such as browsing the internet.\cite{TDDBM}
+
+\paragraph{Distinct functions} %\mbox{} \\
+Embedded system OS differs greatly from standard OS in terms of their abilities to perform different functions. Embedded OS will be limited to one single task and will perform the task regardless of user intervention. Examples of devices using an embedded OS would range from a simple toaster to specific embedded systems such as the QNX4 RIOS\cite{NOSvsEOS}.
+
+\subsection{Cons of Embedded OS}
+\paragraph{Hardly Scalable} %\mbox{} \\
+Embedded system OS are usually not upgradable since it's system stays fixed after the initial configuration. Some embedded systems OS like the ones in  ATM machines are also designed to not receive upgrades to prevent tampering. Embedded system OS only allows upgrades if the chip is flashable. An example of an upgradable embedded system OS would be the one in a wifi router, it can be updated by flashing the card in the router upon downloading the new firmware\cite{lifewire}.
+
+\subsection{Pros of Mobile OS}
+\paragraph{Open source platforms are constantly updated and well-supported}
+Mobile  system OS such as Android open source software is one of the most widely used Mobile OS in the world.It is utilised by top mobile conglomerates like Huawei and Samsung. In recent years, we could see that there are more variations of the open source platform to support and cater to specific markets like the HongMengOS (Harmony OS) that is launched in 2019 for new Huawei devices exclusively\cite{HuaweiHongmeng}. Such new launches suggest that Mobile system OS are still in high demand and will be the focal point of operating systems in many years to come.
+
+\paragraph{Convenience and flexibility}
+Mobile  system OS is a newer concept and is built to focus on being convenient to its users. It is improved on existing OS and opts to strive in responsive design, consistent and stable network access and possible improvements to be used in the diverse wireless environment\cite{technopedia}.
+
+Mobile system OS like Android are open-source and are widely used as a base for many relatable OS like HarmonyOS. The fact that it is open source opens itself to many possibilities. It is flexible because many others improve and adjust the software to cater to their own needs.
+
+\subsection{Cons of Mobile OS}
+\paragraph{Instability}
+Mobile system OS struggles with the constraints of handling constant cellular interruptions and communications, power issues and the load on handling multiple applications launched by the user\cite{AAWP}. On average, a mobile phone easily uses anywhere from 50 to 500 processes on a comparatively smaller capacity compared to an embedded system OS which commonly runs a single shell. This leads to frequent crashes and bugs that leads to complications and instabilities.
+
+\paragraph{Battery / Power}
+Mobile OS runs on a limited battery capacity unlike embedded OS which runs with a constant power supply. Although modern mobile devices now are equipped with better batteries, they are still lacking and unable to keep up with improvements in graphics and animations like in triple A games for mobiles. Many background processes are also capable of draining the battery, accelerating its wear.
 
 \section{Conclusion}
+After looking into both embedded system OS and mobile OS, we can see that both types of OS have their own pros and cons. However, in terms of efficiency in performing what they are meant to do, QNX microkernel architecture is by far the most superior. Being small in size,it provides complete memory protection as it runs in the kernel space while other processes run in the user space. Most importantly, we think QNX is a good fit here as it is the best for mission critical applications due to the fact it never crashes thus making it robust, as any third party crashes does not impact the kernel itself and it keeps running at all times\cite{quora}.
 
 %\section*{Acknowledgment}
 %The preferred spelling of the word ``acknowledgment'' in America is without 
