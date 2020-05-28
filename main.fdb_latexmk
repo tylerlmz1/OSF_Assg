@@ -1,14 +1,14 @@
 # Fdb version 3
-["bibtex main"] 1590690513 "main.aux" "main.bbl" "main" 1590690670
+["bibtex main"] 1590690513 "main.aux" "main.bbl" "main" 1590690930
   "/usr/share/texlive/texmf-dist/bibtex/bst/IEEEtran/IEEEtran.bst" 1480098433 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "full_compliance_name.aux" 1590690664 580 150bc5d1bcfdc45dd25740d82f1f2458 ""
-  "main.aux" 1590690664 3816 8840d5ed1e39967712358445199941b7 ""
+  "full_compliance_name.aux" 1590690869 580 150bc5d1bcfdc45dd25740d82f1f2458 ""
+  "main.aux" 1590690869 3816 8840d5ed1e39967712358445199941b7 ""
   "main.bcf" 0 -1 0 ""
   "mainbib.bib" 1590687505 3590 b526a378ad212a5553cd760096302ece ""
   (generated)
   "main.blg"
   "main.bbl"
-["pdflatex"] 1590690670 "main.tex" "main.pdf" "main" 1590690670
+["pdflatex"] 1590690930 "main.tex" "main.pdf" "main" 1590690930
   "/etc/texmf/web2c/texmf.cnf" 1583539495 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1480098666 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
@@ -87,13 +87,13 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1583544228 2700761 ac0584cc9514ab21918550a6948c4ee2 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1583544262 4126389 a6f7daa6af26a927f5b7a13b32fb9017 ""
   "IEEEtran.cls" 1589820539 288338 dbe1bef9b5717ce1577911dfec813dc9 ""
-  "full_compliance_name.aux" 1590690664 580 150bc5d1bcfdc45dd25740d82f1f2458 ""
+  "full_compliance_name.aux" 1590690869 580 150bc5d1bcfdc45dd25740d82f1f2458 ""
   "full_compliance_name.tex" 1589856415 969 1a41f13d2a723069f2697a4ea8464962 ""
   "images/Android_architecture.png" 1590631616 16118 46fc3f216ae7f1c39f9f1598228fa4a1 ""
   "images/QNX_microkernel_mode.png" 1589768612 19343 d902a835bceba972f5ed74e955d6941c ""
-  "main.aux" 1590690664 3816 8840d5ed1e39967712358445199941b7 ""
+  "main.aux" 1590690869 3816 8840d5ed1e39967712358445199941b7 ""
   "main.bbl" 1590690513 4328 c89d41b984932dc7002994fd909e3d54 "bibtex main"
-  "main.tex" 1590690669 14267 8026fa418bf27205ac443f52b7057a08 ""
+  "main.tex" 1590690928 14275 9233fc5b800e52daec1b94c6de6679b7 ""
   (generated)
   "main.log"
   "full_compliance_name.aux"
