@@ -91,26 +91,12 @@ Embedded system operating systems may exist as a standalone independent system o
 \forceindent Covering all types of operating systems in embedded systems and mobile systems can be vague and challenging. With that said, Operating  systems  that are ubiquitous will be chosen to elaborate more in depth about their structure and features.
 
 
-%\bigskip
-\medskip
+\bigskip
 \section{In-depth review and discussion}
 
-\subsection{Major differences between Microkernel and Monolithic Kernel}
-\paragraph{Address space and size}\mbox{} \\
-\forceindent In Microkernel, Other services are implemented as user-level programs located in separate address space from kernel mode[A]. In the Monolithic kernel, Fundamental OS services and other non-essential services are combined together into one single address space[1].  In terms of size, Microkernel only provides fundamental OS services such as interprocess communication(IPC), memory management and CPU scheduling[A]. Therefore the size of the microkernel is smaller than the Monolithic kernel because the Monolithic kernel combined other services with essential services in the same address space as mentioned before.
 
-\bigskip
-\paragraph{Communication between software and hardware}\mbox{} \\
-\forceindent Interprocess communication in Microkernel uses message passing[B] allowing other services to exchange messages between each other indirectly.
-
-\bigskip
-\paragraph{Extensibility}\mbox{} \\
-\forceindent Different approaches on address space influence the extensibility of the kernel, separated address space used by the Microkernel can easily add new services. However, the Monolithic kernel is required to recompile the whole kernel for adding new services or features[Cite].
-
-In the Monolithic kernel, system call is used to allow application programs to interact with the kernel. 
-
-%\paragraph{Microkernel in QNX Architecture} \mbox{} \\
-%\forceindent QNX is one of the operating systems used in real-time embedded systems. QNX heavily relies on Microkernel architecture to support its own operating system\cite{Burger}\cite{Galvinbook}.
+\paragraph{Microkernel in QNX Architecture} \mbox{} \\
+\forceindent QNX is one of the operating systems used in real-time embedded systems. QNX heavily relies on Microkernel architecture to support its own operating system\cite{Burger}\cite{Galvinbook}.
 %TODO: yet add page number for Galvinbook
 %\subsection{QNX operating system}
 
@@ -121,14 +107,11 @@ In the Monolithic kernel, system call is used to allow application programs to i
 \end{center}
 \end{figure}
 
-\forceindent Figure 1 shows QNX added features in the user space address on top of the microkernel. QNX utilizes synchronous message passing allowing services to communicate and synchronize better[B] with other services.
-
 %\paragraph{}
-%\forceindent Microkernel only provides fundamental OS services including interprocess communication(IPC), memory management and CPU scheduling\cite{Galvinbook}. Other services are implemented as user-level programs located in separate address space from Microkernel\cite{Galvinbook}. To achieve extensible service implementation and communication between other services and microkernels. IPC is an important function as it uses message passing\cite{Burger} allowing other services to exchange messages between each other indirectly.
+\forceindent Microkernel only provides fundamental OS services including interprocess communication(IPC), memory management and CPU scheduling\cite{Galvinbook}. Other services are implemented as user-level programs located in separate address space from Microkernel\cite{Galvinbook}. To achieve extensible service implementation and communication between other services and microkernels. IPC is an important function as it uses message passing\cite{Burger} allowing other services to exchange messages between each other indirectly.
 
 \medskip
-%\paragraph{Linux kernel in Android architecture} \mbox{} \\
-\subsection{Linux kernel in Android architecture}
+\paragraph{Linux kernel in Android architecture} \mbox{} \\
 \forceindent Android OS has a 86.1\% market share in the mobile OS market \cite{SMS}. It is based on the Linux kernel with a monolithic structure.
 
 \begin{figure}[h]
