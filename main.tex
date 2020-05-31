@@ -97,19 +97,20 @@ Embedded system operating systems may exist as a standalone independent system o
 
 \subsection{Major differences between Microkernel and Monolithic Kernel}
 \paragraph{Address space and size}\mbox{} \\
-\forceindent In Microkernel, Other services are implemented as user-level programs located in separate address space from kernel mode[A]. In the Monolithic kernel, Fundamental OS services and other non-essential services are combined together into one single address space[1].  In terms of size, Microkernel only provides fundamental OS services such as interprocess communication(IPC), memory management and CPU scheduling[A]. Therefore the size of the microkernel is smaller than the Monolithic kernel because the Monolithic kernel combined other services with essential services in the same address space as mentioned before.
+\forceindent In Microkernel, Other services are implemented as user-level programs located in separate address space from kernel mode\cite{Galvinbook}. In the Monolithic kernel, Fundamental OS services and other non-essential services are combined together into one single address space\cite{Galvinbook}.  In terms of size, Microkernel only provides fundamental OS services such as interprocess communication(IPC), memory management and CPU scheduling\cite{Galvinbook}. Therefore the size of the microkernel is smaller than the Monolithic kernel because the Monolithic kernel combined other services with essential services in the same address space as mentioned before.
 
 \bigskip
 \paragraph{Communication between software and hardware}\mbox{} \\
-\forceindent Interprocess communication in Microkernel uses message passing[B] allowing other services to exchange messages between each other indirectly.
+\forceindent Interprocess communication in Microkernel uses message passing\cite{Burger} allowing other services to exchange messages between each other indirectly.
 
 \bigskip
 \paragraph{Extensibility}\mbox{} \\
-\forceindent Different approaches on address space influence the extensibility of the kernel, separated address space used by the Microkernel can easily add new services. However, the Monolithic kernel is required to recompile the whole kernel for adding new services or features[Cite].
-
-In the Monolithic kernel, system call is used to allow application programs to interact with the kernel. 
+\forceindent Different approaches on address space influence the extensibility of the kernel, separated address space used by the Microkernel can easily add new services. However, the Monolithic kernel is required to recompile the whole kernel for adding new services or features\cite{educba}. In the Monolithic kernel, system call is used to allow application programs to interact with the kernel.
 
 %\paragraph{Microkernel in QNX Architecture} \mbox{} \\
+\medskip
+\subsection{Microkernel in QNX Architecture}
+According to \cite{embhack}, QNX is the most famous operating system used in real-time embedded systems. QNX  heavily relies on Microkernel architecture to support its own operating system\cite{Galvinbook}\cite{Burger}.
 %\forceindent QNX is one of the operating systems used in real-time embedded systems. QNX heavily relies on Microkernel architecture to support its own operating system\cite{Burger}\cite{Galvinbook}.
 %TODO: yet add page number for Galvinbook
 %\subsection{QNX operating system}
@@ -121,7 +122,7 @@ In the Monolithic kernel, system call is used to allow application programs to i
 \end{center}
 \end{figure}
 
-\forceindent Figure 1 shows QNX added features in the user space address on top of the microkernel. QNX utilizes synchronous message passing allowing services to communicate and synchronize better[B] with other services.
+\forceindent Figure 1 shows QNX added features in the user space address on top of the microkernel. QNX utilizes synchronous message passing allowing services to communicate and synchronize better\cite{Burger} with other services.
 
 %\paragraph{}
 %\forceindent Microkernel only provides fundamental OS services including interprocess communication(IPC), memory management and CPU scheduling\cite{Galvinbook}. Other services are implemented as user-level programs located in separate address space from Microkernel\cite{Galvinbook}. To achieve extensible service implementation and communication between other services and microkernels. IPC is an important function as it uses message passing\cite{Burger} allowing other services to exchange messages between each other indirectly.
@@ -140,7 +141,7 @@ In the Monolithic kernel, system call is used to allow application programs to i
 
 %[1] again ffs, assume it is [A] so it Galvinbook
 \smallskip
-\forceindent Fundamental OS services and other non-essential services are combined together into one single address space\cite{Galvinbook}. System calls are used in android architect to allow application programs to interact with the kernel\cite{TDDBM}.
+%\forceindent Fundamental OS services and other non-essential services are combined together into one single address space\cite{Galvinbook}, and system calls are used in android architect to allow application programs to interact with the kernel\cite{TDDBM}.
 
 \smallskip
 \forceindent Figure 2 indicates that android’s architecture consists of a layered stack of software providing an abundance set of frameworks and libraries to support crucial hardware features including graphics, audio\cite{Galvinbook}. For that reason, it gives the android operating system to be compatible with any types of android enabled devices.
@@ -166,9 +167,9 @@ In the Monolithic kernel, system call is used to allow application programs to i
 \medskip
 \subsection{Pros of Mobile OS}
 \paragraph{Open source platforms are constantly updated and well-supported} \mbox{} \\
-\forceindent Mobile OS such as Android open source software is one of the most widely used Mobile OS in the world. It is utilised by top mobile conglomerates like Huawei and Samsung. In recent years, we could see that there are more variations of the open source platform to support and cater to specific markets like the HongMengOS (Harmony OS) that is launched in 2019 for new Huawei devices exclusively\cite{HuaweiHongmeng}. Such new launches suggest that Mobile OS are still in high demand and will be the focal point of operating systems in many years to come. \\
+\forceindent Mobile OS such as Android open source software is one of the most widely used Mobile OS in the world. It is utilised by top mobile conglomerates like Huawei and Samsung. In recent years, we could see that there are more variations of the open source platform to support and cater to specific markets like the HongMengOS (Harmony OS) that is launched in 2019 for new Huawei devices exclusively\cite{HuaweiHongmeng}. Such new launches suggest that Mobile OS are still in high demand and will be the focal point of operating systems in many years to come.
 
-%\medskip
+\medskip
 \paragraph{Convenience and flexibility} \mbox{} \\
 \forceindent Mobile OS is a newer concept and is built to focus on being convenient to its users. It is improved on existing OS and opts to strive in responsive design, consistent and stable network access and possible improvements to be used in the diverse wireless environment\cite{technopedia}.
 
