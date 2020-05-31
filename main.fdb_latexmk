@@ -1,14 +1,14 @@
 # Fdb version 3
-["bibtex main"] 1590945071 "main.aux" "main.bbl" "main" 1590945227
+["bibtex main"] 1590947796 "main.aux" "main.bbl" "main" 1590947871
   "/usr/share/texlive/texmf-dist/bibtex/bst/IEEEtran/IEEEtran.bst" 1480098433 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "full_compliance_name.aux" 1590945209 580 150bc5d1bcfdc45dd25740d82f1f2458 ""
-  "main.aux" 1590945209 4600 7349fb2749549d2dda96421176ba2426 ""
+  "full_compliance_name.aux" 1590947867 580 150bc5d1bcfdc45dd25740d82f1f2458 ""
+  "main.aux" 1590947867 4576 ed73850a9b10e178259b07a68c46217e ""
   "main.bcf" 0 -1 0 ""
   "mainbib.bib" 1590944684 3981 eeab020fdc1dc4382d414e37eddc031c ""
   (generated)
-  "main.blg"
   "main.bbl"
-["pdflatex"] 1590945227 "main.tex" "main.pdf" "main" 1590945227
+  "main.blg"
+["pdflatex"] 1590947871 "main.tex" "main.pdf" "main" 1590947871
   "/etc/texmf/web2c/texmf.cnf" 1583539495 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1480098666 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
@@ -88,16 +88,16 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1583544228 2700761 ac0584cc9514ab21918550a6948c4ee2 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1583544262 4126389 a6f7daa6af26a927f5b7a13b32fb9017 ""
   "IEEEtran.cls" 1589820539 288338 dbe1bef9b5717ce1577911dfec813dc9 ""
-  "full_compliance_name.aux" 1590945209 580 150bc5d1bcfdc45dd25740d82f1f2458 ""
+  "full_compliance_name.aux" 1590947867 580 150bc5d1bcfdc45dd25740d82f1f2458 ""
   "full_compliance_name.tex" 1589856415 969 1a41f13d2a723069f2697a4ea8464962 ""
   "images/Android_architecture.png" 1590631616 16118 46fc3f216ae7f1c39f9f1598228fa4a1 ""
   "images/QNX_microkernel_mode.png" 1589768612 19343 d902a835bceba972f5ed74e955d6941c ""
-  "main.aux" 1590945209 4600 7349fb2749549d2dda96421176ba2426 ""
-  "main.bbl" 1590945071 5128 ef90a1ae6785f369e5fc7b2e88eba82d "bibtex main"
-  "main.tex" 1590945226 16722 86daa85a5630b71b418382d4385b6a45 ""
+  "main.aux" 1590947867 4576 ed73850a9b10e178259b07a68c46217e ""
+  "main.bbl" 1590947796 4877 0f190416d0969f8f39d073b1a4b46041 "bibtex main"
+  "main.tex" 1590947870 18702 3965ead3398c4e59f6bbcde6a3e30b7a ""
   (generated)
   "full_compliance_name.aux"
-  "bib.aux"
-  "main.log"
   "main.aux"
+  "main.log"
   "main.pdf"
+  "bib.aux"
